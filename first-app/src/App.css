@@ -1,0 +1,16 @@
+.App {
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url(./images/blake-meyer-CRNbHjNaljo-unsplash.jpg);
+  background-size: cover;        /* makes image cover full screen */
+  background-position: center;   /* centers the image */
+  background-repeat: no-repeat;  /* prevents repeating */
+  background-attachment: fixed;  /* optional: keeps it fixed while scrolling */
+  color: #fff;
+}
