@@ -1,39 +1,8 @@
-// package com.example.demo;
-
-// import java.util.ArrayList;
-// import java.util.List;
-
-// public class EmployeeServiceImpl implements EmployeeService{
-
-//     List<Employee> employees = new ArrayList<>();
-
-//     @Override
-//     public String createEmployee(Employee employee) {
-//         employees.add(employee);
-//         return "Saved Successfully";
-//     }
-
-//     @Override
-//     public List<Employee> readEmployees() {
-//         return employees;
-//     }
-
-//     @Override
-//     public boolean deleteEmployee(Long id) {
-//         employees.remove(id);
-//         return true;
-//     }
-
-
-// }
 package com.example.demo;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-// import ch.qos.logback.core.joran.util.beans.BeanUtil;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -50,8 +19,6 @@ public class EmployeeServiceImpl implements EmployeeService {
         EmployeeEntity employeeEntity = new EmployeeEntity();
         BeanUtils.copyProperties(employee, employeeEntity);
         employeeRepository.save(employeeEntity);
-
-        //employees.add(employee);
         return "Saved Successfully";
     }
 
@@ -95,15 +62,6 @@ public class EmployeeServiceImpl implements EmployeeService {
         return employee;
     }
 
-    // @Override
-    // public boolean deleteEmployee(Long id) {
-    //     if(employeeRepository.existsById(id)) {
-    //         employeeRepository.deleteById(id);
-    //         return true;
-    //     } else {
-    //         return false;
-    //     }
-    // }
-
+    
 }
 

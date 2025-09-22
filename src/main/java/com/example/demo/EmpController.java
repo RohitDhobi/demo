@@ -1,6 +1,5 @@
 package com.example.demo;
 
-// import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,8 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin("http://localhost:3000/")
 public class EmpController {
 
-    // List<Employee> employees = new ArrayList<>();
-    // EmployeeService employeeService = new EmployeeServiceImpl();
+    
     
     // //Dependncy Injection
     @Autowired
@@ -36,7 +34,6 @@ public class EmpController {
     }
     @PostMapping("employees")
     public String createEmployee(@RequestBody Employee employee){
-        // employees.add(employee);
         return employeeService.createEmployee(employee);
     }
     @DeleteMapping("employees/{id}")
